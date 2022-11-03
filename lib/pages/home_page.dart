@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
         title: const Text("Catelog App"),
       ),
       body: Center(
+        // ignore: avoid_unnecessary_containers
         child: Container(
           child: Text("Welcome to $day days of flutter by $name"),
         ),
