@@ -1,6 +1,8 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 
+import '../widgets/drawer.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -11,7 +13,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("EAT FRESH"),
+        title: const Text(
+          "EAT FRESH",
+          style: TextStyle(color: Colors.deepPurple),
+        ),
       ),
       body: Center(
         // ignore: avoid_unnecessary_containers
@@ -19,7 +24,7 @@ class HomePage extends StatelessWidget {
           child: Text("Welcome to $day days of flutter by $name"),
         ),
       ),
-      drawer: const Drawer(),
+      drawer: const MyDrawer(),
     );
   }
 }
