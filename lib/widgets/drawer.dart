@@ -7,7 +7,7 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const imageUrl =
-        "https://www.facebook.com/photo/?fbid=5321563321241961&set=a.109141109150901";
+        "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600";
     return Drawer(
       backgroundColor: Colors.deepPurple,
       child: ListView(
@@ -69,6 +69,17 @@ class MyDrawer extends StatelessWidget {
             ),
             title: Text(
               "Settings",
+              style: TextStyle(color: Colors.white),
+              textScaleFactor: 1.2,
+            ),
+          ),
+          const ListTile(
+            leading: Icon(
+              CupertinoIcons.fullscreen_exit,
+              color: Colors.white,
+            ),
+            title: Text(
+              "Logout",
               style: TextStyle(color: Colors.white),
               textScaleFactor: 1.2,
             ),
