@@ -1,5 +1,9 @@
+class CatelogModel {
+  static List<Item> items = [];
+}
+
 class Item {
-  final String id;
+  final int id;
   final String name;
   final String desc;
   final num price;
@@ -13,15 +17,24 @@ class Item {
       required this.price,
       required this.color,
       required this.image});
-}
 
-final product = [
-  Item(
-      id: "EatFresh001",
-      name: "iPhone 12 Pro",
-      desc: "iPhone 12th Generation",
-      price: 999,
-      color: "#33505a",
-      image:
-          "https://cdn.pocket-lint.com/r/s/970x/assets/images/154302-phones-review-iphone-12-pro-review-product-shots-image3-wd487ybwpf-jpg.webp"),
-];
+  factory Item.fromMap(Map<String, dynamic> map) {
+    return Item(
+      id: map["id"],
+      name: map["name"],
+      desc: map["desc"],
+      price: map["price"],
+      color: map["color"],
+      image: map["image"],
+    );
+  }
+
+  toMap() => {
+        "id": id,
+        "name": name,
+        "desc": desc,
+        "price": price,
+        "color": color,
+        "image": image,
+      };
+}
