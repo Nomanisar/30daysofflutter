@@ -4,8 +4,10 @@
 
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_catalog/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'package:flutter_catalog/models/catelog.dart';
@@ -15,6 +17,7 @@ import 'package:flutter_catalog/widgets/themes.dart';
 import '../widgets/drawer.dart';
 import '../widgets/homepage_widget/catelog_list.dart';
 import '../widgets/homepage_widget/catelogheader.dart';
+import 'package:cupertino_icons/cupertino_icons.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -50,6 +53,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => Navigator.pushNamed(context, MyRoutes.cartPage),
+          backgroundColor: Mytheme.darkBlueishColor,
+          child: Icon(CupertinoIcons.cart),
+        ),
         backgroundColor: Mytheme.creamColor,
         body: SafeArea(
           child: Container(

@@ -60,7 +60,7 @@ class CatelogItem extends StatelessWidget {
                 alignment: MainAxisAlignment.spaceBetween,
                 buttonPadding: EdgeInsets.zero,
                 children: [
-                  "\$${catelog.price}".text.xl.bold.make(),
+                  "\$${catelog.price}".text.lg.bold.make(),
                   ElevatedButton(
                     onPressed: () {},
                     style: ButtonStyle(
@@ -70,7 +70,7 @@ class CatelogItem extends StatelessWidget {
                         const StadiumBorder(),
                       ),
                     ),
-                    child: "Buy".text.make(),
+                    child: "Add to cart".text.make(),
                   ),
                 ],
               ).pOnly(right: 8.0),
