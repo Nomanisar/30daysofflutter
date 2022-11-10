@@ -10,7 +10,7 @@ class Mytheme {
         fontFamily: GoogleFonts.poppins().fontFamily,
         cardColor: Colors.white,
         canvasColor: creamColor,
-        buttonColor: lightBlueishColor,
+        buttonColor: darkBlueishColor,
         // primaryTextTheme: GoogleFonts.latoTextTheme(),
         appBarTheme: const AppBarTheme(
           color: Colors.white,
