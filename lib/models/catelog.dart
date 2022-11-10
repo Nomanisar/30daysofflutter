@@ -1,12 +1,6 @@
-import 'dart:convert';
+// ignore_for_file: null_closures
 
 class CatelogModel {
-  static final cateModel = CatelogModel._internal();
-
-  CatelogModel._internal();
-
-  factory CatelogModel() => cateModel;
-
   static List<Item> items = [];
 
   //Get by ID
